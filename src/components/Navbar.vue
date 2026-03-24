@@ -44,6 +44,9 @@ const menuOpen = ref(false)
   background-color: var(--black);
   text-transform: uppercase;
   border-bottom: 1px solid var(--yellow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar__logo {
