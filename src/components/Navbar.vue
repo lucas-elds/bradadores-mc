@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar__header">
       <a href="#inicio" class="navbar__logo">
-        <img class="navbar__image" :src="brasao" alt="Logo Bradadores MC">
+        <img class="navbar__image" :src="logo" alt="Logo Bradadores MC">
         <h1 class="navbar__title">
           <span class="navbar__title-main">Bradadores</span>
           <span class="navbar__title-sub">Motoclube</span>
@@ -30,7 +30,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import brasao from '../assets/images/brasao.webp'
+import logo from '../assets/images/logo.webp'
 
 const menuOpen = ref(false)
 </script>
