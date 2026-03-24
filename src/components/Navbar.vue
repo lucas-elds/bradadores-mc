@@ -40,7 +40,7 @@ const menuOpen = ref(false)
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 0.6rem 2.2rem;
   background-color: var(--black);
   text-transform: uppercase;
   border-bottom: 1px solid var(--yellow);
@@ -52,11 +52,11 @@ const menuOpen = ref(false)
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
 }
 
 .navbar__image {
-  height: 60px;
+  height: 3.5rem;
 }
 
 .navbar__title {
@@ -64,49 +64,49 @@ const menuOpen = ref(false)
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1rem;
   font-weight: normal;
 }
 
 .navbar__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   color: var(--yellow);
 }
 
 .navbar__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: 13px;
+  font-size: 0.9rem;
   color: var(--white);
 }
 
 .navbar__menu {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.9rem;
   display: flex;
-  gap: 40px;
+  gap: 2.2rem;
 }
 
 .navbar__menu a {
   display: flex;
   color: var(--white);
   transition: all 0.3s ease;
-  padding: 2px 0;
-  border-bottom: 2px solid var(--black);
+  padding: 0.1rem 0;
+  border-bottom: 0.1rem solid var(--black);
 }
 
 .navbar__menu a:hover {
   color: var(--yellow);
-  border-bottom: 2px solid var(--yellow);
+  border-bottom: 0.1rem solid var(--yellow);
 }
 
 .navbar__toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
-  height: 18px;
+  width: 1.5rem;
+  height: 1.1rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -114,15 +114,15 @@ const menuOpen = ref(false)
 
 .navbar__toggle span {
   display: block;
-  height: 3px;
+  height: 0.2rem;
   width: 100%;
   background-color: var(--white);
-  border-radius: 2px;
+  border-radius: 0.1rem;
   transition: all 0.3s ease;
 }
 
 .navbar__toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5.5px, 5.5px);
+  transform: rotate(45deg) translate(0.33rem, 0.33rem);
 }
 
 .navbar__toggle.active span:nth-child(2) {
@@ -130,13 +130,13 @@ const menuOpen = ref(false)
 }
 
 .navbar__toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5.5px, -5.5px);
+  transform: rotate(-45deg) translate(0.33rem, -0.33rem);
 }
 
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    padding: 10px 15px;
+    padding: 0.6rem 0.9rem;
   }
 
   .navbar__header {
@@ -149,10 +149,10 @@ const menuOpen = ref(false)
   .navbar__menu {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.6rem;
     width: 100%;
-    border-radius: 10px;
-    font-size: 13px;
+    border-radius: 0.6rem;
+    font-size: 0.8rem;
     opacity: 0;
     pointer-events: none;
     max-height: 0;
@@ -160,22 +160,22 @@ const menuOpen = ref(false)
   }
 
   .navbar__menu.active {
-    max-height: 300px;
+    max-height: 18rem;
     opacity: 1;
-    padding-top: 15px;
+    padding-top: 0.9rem;
     pointer-events: all;
     transition: all 0.8s ease;
   }
 
   .navbar__menu a {
-    padding: 10px;
-    border: 2px solid var(--white);
-    border-radius: 10px;
+    padding: 0.6rem;
+    border: 0.1rem solid var(--white);
+    border-radius: 0.6rem;
     justify-content: center;
   }
 
   .navbar__menu a:hover {
-    border: 2px solid var(--yellow);
+    border: 0.1rem solid var(--yellow);
   }
 
   .navbar__toggle {
@@ -186,5 +186,4 @@ const menuOpen = ref(false)
     background-color: var(--yellow);
   }
 }
-
 </style>

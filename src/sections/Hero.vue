@@ -29,7 +29,7 @@ import logo from '../assets/images/logo.webp'
     transform: translateY(0);
   }
   40% {
-    transform: translateY(8px);
+    transform: translateY(0.5rem);
   }
   100% {
     transform: translateY(0);
@@ -38,7 +38,7 @@ import logo from '../assets/images/logo.webp'
 
 .hero {
   position: relative;
-  min-height: 768px;
+  min-height: 100vh;
   background: url('../assets/images/hero.webp') center/cover no-repeat;
 }
 
@@ -50,14 +50,14 @@ import logo from '../assets/images/logo.webp'
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
 }
 
 .hero__logo {
   background-color: var(--black);
-  width: 150px;
-  border-radius: 70px;
-  padding: 5px;
+  width: 9.5rem;
+  border-radius: 4.4rem;
+  padding: 0.35rem;
 }
 
 .hero__title {
@@ -66,50 +66,50 @@ import logo from '../assets/images/logo.webp'
   align-items: center;
   text-transform: uppercase;
   font-weight: normal;
-  gap: 2px;
+  gap: 0.1rem;
 }
 
 .hero__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: 64px;
+  font-size: 4rem;
   color: var(--yellow);
-  letter-spacing: 3px;
-  line-height: 64px;
+  letter-spacing: 0.2rem;
+  line-height: 4rem;
 }
 
 .hero__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--white);
-  letter-spacing: 2px;
-  line-height: 24px;
+  letter-spacing: 0.12rem;
+  line-height: 1.5rem;
 }
 
 .hero__slogan-container {
-  margin: 30px 0;
+  margin: 1.9rem 0;
   font-weight: lighter;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.7rem;
 }
 
 .hero__line {
   height: 1px;
-  width: 75px;
+  width: 5rem;
   background-color: var(--yellow);
 }
 
 .hero__slogan {
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--white);
-  letter-spacing: 1px;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
 }
 
 .hero__icon {
   color: var(--yellow);
-  font-size: 30px;
+  font-size: 1.8rem;
   animation: bounce 1.5s ease-in-out infinite;
 }
 </style>
