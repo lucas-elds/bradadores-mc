@@ -5,5 +5,5 @@ import Hero from './sections/Hero.vue';
 
 <template>
   <Navbar />
-  <Hero />
+  <Hero id="inicio"/>
 </template>

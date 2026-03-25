@@ -19,20 +19,38 @@
       </button>
     </div>
     <ul class="navbar__menu" :class="{ active: menuOpen }">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#localizacao">Onde estamos</a></li>
-      <li><a href="#comando">Comando</a></li>
-      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#inicio" :class="{ active: activeSection === 'inicio' }">Início</a></li>
+      <li><a href="#sobre" :class="{ active: activeSection === 'sobre' }">Sobre</a></li>
+      <li><a href="#localizacao" :class="{ active: activeSection === 'localizacao' }">Onde estamos</a></li>
+      <li><a href="#comando" :class="{ active: activeSection === 'comando' }">Comando</a></li>
+      <li><a href="#galeria" :class="{ active: activeSection === 'galeria' }">Galeria</a></li>
+      <li><a href="#galeria" :class="{ active: activeSection === 'contato' }">Contato</a></li>
     </ul>
   </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import logo from '../assets/images/logo.webp'
 
 const menuOpen = ref(false)
+
+const activeSection = ref('inicio')
+
+onMounted(() => {
+  const watcher = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        activeSection.value = entry.target.id
+      }
+    })
+  }, { 
+    threshold: 0.6 
+  })
+  document.querySelectorAll('section[id]').forEach((section) => {
+    watcher.observe(section)
+  })
+})
 </script>
 
 <style scoped>
@@ -94,6 +112,11 @@ const menuOpen = ref(false)
   transition: all 0.3s ease;
   padding: 0.1rem 0;
   border-bottom: 0.1rem solid var(--black);
+}
+
+.navbar__menu a.active {
+  color: var(--yellow);
+  border-bottom: 0.1rem solid var(--yellow);
 }
 
 .navbar__menu a:hover {
@@ -171,6 +194,10 @@ const menuOpen = ref(false)
     border: 0.1rem solid var(--white);
     border-radius: 0.6rem;
     justify-content: center;
+  }
+
+  .navbar__menu a.active {
+    border: 0.1rem solid var(--yellow);
   }
 
   .navbar__menu a:hover {
