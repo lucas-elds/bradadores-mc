@@ -24,6 +24,7 @@ import logo from '../assets/images/logo.webp'
 </script>
 
 <style scoped>
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -71,18 +72,18 @@ import logo from '../assets/images/logo.webp'
 
 .hero__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: 4rem;
+  font-size: clamp(1.8rem, 8vw, 4rem); 
   color: var(--yellow);
   letter-spacing: 0.2rem;
-  line-height: 4rem;
+  line-height: 1;
 }
 
 .hero__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
   color: var(--white);
   letter-spacing: 0.12rem;
-  line-height: 1.5rem;
+  line-height: 1;
 }
 
 .hero__slogan-container {
@@ -95,13 +96,14 @@ import logo from '../assets/images/logo.webp'
 
 .hero__line {
   height: 1px;
-  width: 5rem;
+  width: clamp(2.7rem, 10vw, 5rem);
   background-color: var(--yellow);
 }
 
 .hero__slogan {
   font-family: 'Oswald', sans-serif;
   font-size: 1.25rem;
+  font-size: clamp(0.8rem, 2.5vw, 1.25rem);
   color: var(--white);
   letter-spacing: 0.06rem;
   text-transform: uppercase;
@@ -110,6 +112,7 @@ import logo from '../assets/images/logo.webp'
 .hero__icon {
   color: var(--yellow);
   font-size: 1.8rem;
+  font-size: clamp(1.5rem, 3.6vw, 1.8rem);
   animation: bounce 1.5s ease-in-out infinite;
 }
 
@@ -117,19 +120,6 @@ import logo from '../assets/images/logo.webp'
   .hero {
     min-height: 100dvh;
     background: var(--black) url('../assets/images/hero.webp') 15% center/cover no-repeat;
-  }
-
-  .hero__title-main {
-    font-size: 2.8rem;
-    line-height: 3rem;
-  }
-
-  .hero__title-sub {
-    font-size: 1.2rem;
-  }
-
-  .hero__slogan {
-    font-size: 1rem;
   }
 }
 </style>
