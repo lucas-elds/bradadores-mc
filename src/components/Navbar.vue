@@ -70,20 +70,20 @@ const menuOpen = ref(false)
 
 .navbar__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: var(--yellow);
 }
 
 .navbar__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   color: var(--white);
 }
 
 .navbar__menu {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
   display: flex;
   gap: 2.2rem;
 }
@@ -152,7 +152,6 @@ const menuOpen = ref(false)
     gap: 0.6rem;
     width: 100%;
     border-radius: 0.6rem;
-    font-size: 0.8rem;
     opacity: 0;
     pointer-events: none;
     max-height: 0;
@@ -168,7 +167,7 @@ const menuOpen = ref(false)
   }
 
   .navbar__menu a {
-    padding: 0.6rem;
+    padding: clamp(0.5rem, 1.2vw, 0.6rem);
     border: 0.1rem solid var(--white);
     border-radius: 0.6rem;
     justify-content: center;
