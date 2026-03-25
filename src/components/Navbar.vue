@@ -58,7 +58,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 2.2rem;
+  padding: 0.6rem clamp(1rem, 2vw, 2.2rem);
   background-color: var(--black);
   text-transform: uppercase;
   border-bottom: 1px solid var(--yellow);
@@ -101,9 +101,9 @@ onMounted(() => {
 .navbar__menu {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
   display: flex;
-  gap: 2.2rem;
+  gap: clamp(1rem, 3vw, 2.2rem);;
 }
 
 .navbar__menu a {
