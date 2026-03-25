@@ -39,7 +39,7 @@ import logo from '../assets/images/logo.webp'
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url('../assets/images/hero.webp') center/cover no-repeat;
+  background: var(--black) url('../assets/images/hero.webp') center/cover no-repeat;
 }
 
 .hero__overlay {
@@ -111,5 +111,25 @@ import logo from '../assets/images/logo.webp'
   color: var(--yellow);
   font-size: 1.8rem;
   animation: bounce 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100dvh;
+    background: var(--black) url('../assets/images/hero.webp') 15% center/cover no-repeat;
+  }
+
+  .hero__title-main {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
+  .hero__title-sub {
+    font-size: 1.2rem;
+  }
+
+  .hero__slogan {
+    font-size: 1rem;
+  }
 }
 </style>
