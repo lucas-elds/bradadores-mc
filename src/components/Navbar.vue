@@ -121,7 +121,6 @@ onMounted(() => {
 
 .navbar__menu a:hover {
   color: var(--yellow);
-  border-bottom: 0.1rem solid var(--yellow);
 }
 
 .navbar__toggle {
