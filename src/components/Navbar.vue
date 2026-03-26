@@ -41,7 +41,9 @@ onMounted(() => {
   const watcher = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        activeSection.value = entry.target.id
+        const id = entry.target.id
+        activeSection.value = id
+        history.replaceState(null, null, `#${id}`)
       }
     })
   }, { 
