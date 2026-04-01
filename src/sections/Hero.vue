@@ -39,7 +39,7 @@ import logo from '../assets/images/logo.webp'
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   background: var(--black) url('../assets/images/hero.webp') center/cover no-repeat;
 }
 
@@ -51,14 +51,11 @@ import logo from '../assets/images/logo.webp'
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
+  gap: clamp(0.6rem, 0.4vw + 0.8vh, 1rem);
 }
 
 .hero__logo {
-  background-color: var(--black);
-  width: 9.5rem;
-  border-radius: 4.4rem;
-  padding: 0.35rem;
+  width: clamp(15rem, 8vw + 10vh, 17rem);
 }
 
 .hero__title {
@@ -67,27 +64,26 @@ import logo from '../assets/images/logo.webp'
   align-items: center;
   text-transform: uppercase;
   font-weight: normal;
-  gap: 0.1rem;
 }
 
 .hero__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: clamp(1.8rem, 9vw, 4rem); 
+  font-size: clamp(4rem, 2.5vw + 4vh, 5rem);
   color: var(--yellow);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   line-height: 1;
 }
 
 .hero__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  font-size: clamp(1.8rem, 0.8vw + 1.3vh, 2rem);
   color: var(--white);
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.08rem;
   line-height: 1;
 }
 
 .hero__slogan-container {
-  margin: 1.9rem 0;
+  margin: clamp(1.5rem, 0.8vw + 1vh, 2rem);
   font-weight: lighter;
   display: flex;
   align-items: center;
@@ -96,30 +92,52 @@ import logo from '../assets/images/logo.webp'
 
 .hero__line {
   height: 1px;
-  width: clamp(2.7rem, 10vw, 5rem);
+  width: clamp(5rem, 3vw + 5vh, 6rem);
   background-color: var(--yellow);
 }
 
 .hero__slogan {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.25rem;
-  font-size: clamp(0.8rem, 3.5vw, 1.25rem);
+  font-size: clamp(0.8rem, 0.8vw + 1vh, 1.5rem);
   color: var(--white);
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 .hero__icon {
   color: var(--yellow);
-  font-size: 1.8rem;
   font-size: clamp(1.5rem, 3.6vw, 1.8rem);
   animation: bounce 1.5s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100dvh;
+    min-height: calc(100dvh - var(--nav-height));
     background: var(--black) url('../assets/images/hero.webp') 15% center/cover no-repeat;
+  }
+
+  .hero__logo {
+    width: 35vw;
+  }
+
+  .hero__title-main {
+    font-size: 10vw;
+  }
+
+  .hero__title-sub {
+    font-size: 4vw;
+  }
+
+  .hero__line {
+    width: 4vh;
+  }
+
+  .hero__slogan {
+    font-size: 3vw;
+  }
+
+  .hero__slogan-container {
+    margin: 5vh;
   }
 }
 </style>
