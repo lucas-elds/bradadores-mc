@@ -84,7 +84,7 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-weight: normal;
 }
 
