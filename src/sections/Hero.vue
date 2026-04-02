@@ -113,12 +113,13 @@ import logo from '../assets/images/logo.webp'
 
 @media (max-width: 768px) {
   .hero {
+    min-height: 700px;
     height: calc(100dvh - var(--nav-height));
     background: var(--black) url('../assets/images/hero.webp') 15% center/cover no-repeat;
   }
 
   .hero__logo {
-    width: 35vw;
+    width: 30vw;
   }
 
   .hero__title-main {
@@ -130,15 +131,15 @@ import logo from '../assets/images/logo.webp'
   }
 
   .hero__line {
-    width: 4vh;
+    width: 10vw;
   }
 
   .hero__slogan {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   .hero__slogan-container {
-    margin: 5vh;
+    margin: clamp(1rem, 4vh, 2rem);
   }
 }
 </style>
