@@ -67,16 +67,17 @@ onMounted(() => {
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: var(--nav-height);
 }
 
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.4rem;
 }
 
 .navbar__image {
-  height: 3.5rem;
+  height: 3rem;
 }
 
 .navbar__title {
@@ -86,26 +87,28 @@ onMounted(() => {
   align-items: center;
   letter-spacing: 0.05rem;
   font-weight: normal;
+  line-height: 1;
+  gap: 0.2rem;
 }
 
 .navbar__title-main {
   font-family: 'Bevan', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: 0.9rem;
   color: var(--yellow);
 }
 
 .navbar__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  font-size: 0.8rem;
   color: var(--white);
 }
 
 .navbar__menu {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  font-size: clamp(0.8rem, 0.8vw, 0.85rem);
   display: flex;
-  gap: clamp(1rem, 3vw, 2.2rem);;
+  gap: clamp(1rem, 3vw, 2.2rem);
 }
 
 .navbar__menu a {
@@ -159,8 +162,12 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .navbar {
+    justify-content: center;
     flex-direction: column;
-    padding: 0.6rem 0.9rem;
+  }
+
+  .navbar__image {
+    height: 2.7rem;
   }
 
   .navbar__header {
@@ -175,34 +182,36 @@ onMounted(() => {
     flex-direction: column;
     gap: 0.6rem;
     width: 100%;
-    border-radius: 0.6rem;
     opacity: 0;
     pointer-events: none;
-    max-height: 0;
     transition: all 0.4s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--black);
+    border-bottom: 1px solid var(--yellow);
+    padding: 1rem;
   }
 
   .navbar__menu.active {
-    max-height: 18rem;
     opacity: 1;
-    padding-top: 0.9rem;
     pointer-events: all;
     transition: all 0.8s ease;
   }
 
   .navbar__menu a {
-    padding: clamp(0.5rem, 1.2vw, 0.6rem);
-    border: 0.1rem solid var(--white);
+    padding: 1.2vmin;
+    border: 2px solid var(--white);
     border-radius: 0.6rem;
     justify-content: center;
   }
 
   .navbar__menu a.active {
-    border: 0.1rem solid var(--yellow);
+    border: 2px solid var(--yellow);
   }
 
   .navbar__menu a:hover {
-    border: 0.1rem solid var(--yellow);
+    border: 2px solid var(--yellow);
   }
 
   .navbar__toggle {
