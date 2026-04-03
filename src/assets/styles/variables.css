@@ -3,4 +3,5 @@
   --white: #fff;
   --yellow: #fcc000;
   --nav-height: 3.5rem;
+  --section-height: calc(100dvh - var(--nav-height));
 }

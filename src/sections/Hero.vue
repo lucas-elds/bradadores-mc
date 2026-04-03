@@ -37,10 +37,20 @@ import logo from '../assets/images/logo.webp'
   }
 }
 
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-20vmin);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   position: relative;
-  min-height: 768px;
-  height: calc(100vh - var(--nav-height));
+  min-height: var(--section-height);
   background: var(--black) url('../assets/images/hero.webp') center/cover no-repeat;
 }
 
@@ -52,11 +62,12 @@ import logo from '../assets/images/logo.webp'
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.6rem, 0.4vw + 0.8vh, 1rem);
+  gap: clamp(0.2rem, 1vmin, 2.5rem);
 }
 
 .hero__logo {
-  width: clamp(15rem, 8vw + 10vh, 17rem);
+  width: clamp(1rem, 30vmin, 25rem);
+  animation: drop 1s ease-out;
 }
 
 .hero__title {
@@ -65,81 +76,56 @@ import logo from '../assets/images/logo.webp'
   align-items: center;
   text-transform: uppercase;
   font-weight: normal;
+  line-height: 1;
+  animation: drop 1s ease-out;
 }
 
 .hero__title-main {
-  font-size: clamp(4rem, 2.5vw + 4vh, 5rem);
   font-family: 'Alfa Slab One', serif;
+  font-size: clamp(1rem, 11vmin, 9rem);
   color: var(--yellow);
-  letter-spacing: 0.15rem;
-  line-height: 1;
+  letter-spacing: 0.4vmin;
 }
 
 .hero__title-sub {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(1.8rem, 0.8vw + 1.3vh, 2rem);
+  font-size: clamp(1rem, 5vmin, 4rem);
   color: var(--white);
-  letter-spacing: 0.08rem;
-  line-height: 1;
+  letter-spacing: 0.2vmin;
 }
 
 .hero__slogan-container {
-  margin: clamp(1.5rem, 0.8vw + 1vh, 2rem);
+  margin: clamp(1rem, 3vmin, 2.5rem);
   font-weight: lighter;
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: clamp(1rem, 2vmin, 3rem);
+  animation: drop 1s ease-out;
 }
 
 .hero__line {
   height: 1px;
-  width: clamp(5rem, 3vw + 5vh, 6rem);
+  width: clamp(1rem, 10vmin, 8rem);
   background-color: var(--yellow);
 }
 
 .hero__slogan {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(0.8rem, 0.8vw + 1vh, 1.5rem);
+  font-size: clamp(1rem, 3.3vmin, 2.8rem);
   color: var(--white);
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1vmin;
   text-transform: uppercase;
 }
 
 .hero__icon {
   color: var(--yellow);
-  font-size: clamp(1.5rem, 3.6vw, 1.8rem);
+  font-size: clamp(1rem, 4vmin, 3rem);
   animation: bounce 1.5s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 700px;
-    height: calc(100dvh - var(--nav-height));
     background: var(--black) url('../assets/images/hero.webp') 15% center/cover no-repeat;
-  }
-
-  .hero__logo {
-    width: 30vw;
-  }
-
-  .hero__title-main {
-    font-size: 10vw;
-  }
-
-  .hero__title-sub {
-    font-size: 4vw;
-  }
-
-  .hero__line {
-    width: 10vw;
-  }
-
-  .hero__slogan {
-    font-size: 3.5vw;
-  }
-
-  .hero__slogan-container {
-    margin: clamp(1rem, 4vh, 2rem);
   }
 }
 </style>
