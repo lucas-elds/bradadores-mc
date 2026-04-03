@@ -68,8 +68,8 @@ import logo from '../assets/images/logo.webp'
 }
 
 .hero__title-main {
-  font-family: 'Bevan', sans-serif;
   font-size: clamp(4rem, 2.5vw + 4vh, 5rem);
+  font-family: 'Alfa Slab One', serif;
   color: var(--yellow);
   letter-spacing: 0.15rem;
   line-height: 1;

@@ -92,7 +92,7 @@ onMounted(() => {
 }
 
 .navbar__title-main {
-  font-family: 'Bevan', sans-serif;
+  font-family: 'Alfa Slab One', serif;
   font-size: 0.9rem;
   color: var(--yellow);
 }
