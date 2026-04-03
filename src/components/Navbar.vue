@@ -24,7 +24,7 @@
       <li><a href="#localizacao" :class="{ active: activeSection === 'localizacao' }">Onde estamos</a></li>
       <li><a href="#comando" :class="{ active: activeSection === 'comando' }">Comando</a></li>
       <li><a href="#galeria" :class="{ active: activeSection === 'galeria' }">Galeria</a></li>
-      <li><a href="#galeria" :class="{ active: activeSection === 'contato' }">Contato</a></li>
+      <li><a href="#contato" :class="{ active: activeSection === 'contato' }">Contato</a></li>
     </ul>
   </nav>
 </template>
